@@ -1,0 +1,40 @@
+﻿@model HotelBooking
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<p>The Details of your booking</p>
+<div class="row">
+    <div class="col-6">
+        <div class="card-header">
+            <h4>Enter Your Personal Details</h4>
+        </div>
+        <div class="card-body">
+            <form asp-controller="HotelBooking" asp-action="CreateBook" method="post">
+                <div class="mb-3">
+                    <label class="form-label">Id</label>
+                    <input asp-for=Id type="number" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">GuestName</label>
+                    <input asp-for=GuestName type="text" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">CheckIn Date</label>
+                    <input asp-for=DateStart type="date" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">CheckOut Date</label>
+                    <input asp-for=DateEnd type="date" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Book</button>
+                </div>
+            </form>
+            <div class="card-footer">
+                <h5>Hyatt Properties</h5>
+            </div>
+        </div>
+    </div>
+</div>

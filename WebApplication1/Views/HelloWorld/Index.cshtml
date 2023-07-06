@@ -1,0 +1,13 @@
+﻿@model List<WebApplication1.Models.DogViewModel>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<p>The details of the dogs are under.</p>
+<ul>
+    @foreach(var x in Model)
+    {
+        <li>@x.Name (@x.age)</li>
+    }
+</ul>

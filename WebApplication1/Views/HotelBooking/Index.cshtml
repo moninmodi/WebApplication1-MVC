@@ -1,0 +1,18 @@
+﻿@model List<WebApplication1.Models.HotelBooking>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<p>Your Booking Details</p>
+<ul>
+    @foreach(var x in Model)
+    {
+        <li>The Booking ID is @x.Id</li>
+        <li>The Booking Name is @x.GuestName</li>
+        <li>The Checkin date is @x.DateStart</li>
+        <li>The CheckOut Date is @x.DateEnd</li>
+        <hr />
+    }
+</ul>
+
